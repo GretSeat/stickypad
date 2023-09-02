@@ -1,16 +1,17 @@
 {
   "name": "todo-mvc-auth-local",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Simple ToDo App is built using the MVC Architecture, we have also implemented \"authorization\" so folx can sign up, customize & personalize the app",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Garrett Stewart",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "bootstrap": "^5.3.1",
     "connect-mongo": "^3.2.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
