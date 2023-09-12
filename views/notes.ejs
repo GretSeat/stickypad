@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+    <h1><%= user.userName %>'s StickyPad</h1>
+    <ul>
+    <% notes.forEach( el => { %>
+            <li class='noteItem' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.note %></span>
+                <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+
+    <h2><%= user.userName %> has <%= left %> Sticky Notes</h2>
+
+    <form action="/notes/createNote" method='POST'>
+        <input type="text" placeholder="Create New Sticky Note" name='noteItem'>
+        <input type="submit">
+    </form>
+
+    <a href="/logout">Logout</a>
+    <%- include('partials/footer') %>
