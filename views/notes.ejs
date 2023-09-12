@@ -1,10 +1,12 @@
 <%- include('partials/header') %>
     <h1><%= user.userName %>'s StickyPad</h1>
-    <ul>
+    <ul class="stickyNotes">
     <% notes.forEach( el => { %>
-            <li class='noteItem' data-id='<%=el._id%>'>
+            <li class='noteItem stickyNote' data-id='<%=el._id%>'>
+                
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.note %></span>
                 <span class='del'> Delete </span>
+            
             </li>
     <% }) %>    
     </ul>
