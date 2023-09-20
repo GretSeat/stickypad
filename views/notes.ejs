@@ -1,22 +1,46 @@
 <%- include('partials/header') %>
-    <h1><%= user.userName %>'s StickyPad</h1>
-    <ul class="stickyNotes">
+    <div class="container">
+        <h1><%= user.userName %>'s StickyPad</h1>
+    </div>
+    <div class="container-md text-center">
+    <ul class="stickyNotes text-center row">
     <% notes.forEach( el => { %>
-            <li class='noteItem stickyNote' data-id='<%=el._id%>'>
+        
+            <li class='noteItem stickyNote container col gy-3 m-1' data-id='<%=el._id%>'>
                 
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.note %></span>
-                <span class='del'> Delete </span>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span>
+                <p class='<%= el.completed === true ? 'completed' : ''%>'><%=el.note %></p>
+                <button type="button" class="btn btn-danger btn-sm del">Delete</button>
             
             </li>
     <% }) %>    
     </ul>
+</div>
+    
 
-    <h2><%= user.userName %> has <%= left %> Sticky Notes</h2>
-
-    <form action="/notes/createNote" method='POST'>
+    <!-- <form action="/notes/createNote" method='POST'>
         <input type="text" placeholder="Create New Sticky Note" name='noteItem'>
-        <input type="submit">
-    </form>
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form> -->
 
-    <a href="/logout">Logout</a>
+
+      <form class="container" action="/notes/createNote" method='POST'>
+        <h2><%= user.userName %> has <%= left %> Sticky Notes</h2>
+        <div class="row mb-3 align-items-center">
+            <label class="form-label">Note Title</label>
+          <input type="text" class="form-control" placeholder="Pick up Paycheck from Boss..." name="title">
+        </div>
+        <div class="row col-12 mb-3">
+            <label  class="form-label">What is your note?</label>
+            <textarea class="form-control form-control-sm" placeholder="I was pretty hungover yesterday, but I think I remember where I work." rows="3" name="noteItem"></textarea>
+        </div>
+        <div class="col-auto mb-3">
+        <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+        </div>
+      </form>
+
+      <div class="container text-center">
+    <a class="btn btn-danger" role="button" href="/logout">Logout</a>
+      </div>
+    
     <%- include('partials/footer') %>

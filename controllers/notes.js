@@ -2,7 +2,6 @@ const Note = require("../models/Note");
 
 module.exports = {
   getNotes: async (req, res) => {
-    console.log(req.user);
     try {
       const noteItems = await Note.find({ userId: req.user.id });
       const itemsLeft = await Note.countDocuments({
@@ -21,6 +20,7 @@ module.exports = {
   createNote: async (req, res) => {
     try {
       await Note.create({
+        title: req.body.title,
         note: req.body.noteItem,
         completed: false,
         userId: req.user.id,

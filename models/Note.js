@@ -5,6 +5,10 @@ const NoteSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  title: {
+    type: String,
+    required: true,
+  },
   completed: {
     type: Boolean,
     required: true,
