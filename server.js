@@ -15,8 +15,10 @@ require("dotenv").config({ path: "./config/.env" });
 // Passport config
 require("./config/passport")(passport);
 
+// Connect to MongoDB
 connectDB();
 
+// Using EJS,
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
@@ -39,6 +41,7 @@ app.use(passport.session());
 
 app.use(flash());
 
+// Setting Routes
 app.use("/", mainRoutes);
 app.use("/notes", notesRoutes);
 
