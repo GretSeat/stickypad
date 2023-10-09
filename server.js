@@ -15,9 +15,6 @@ require("dotenv").config({ path: "./config/.env" });
 // Passport config
 require("./config/passport")(passport);
 
-// Connect to MongoDB
-connectDB();
-
 // Using EJS,
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -48,3 +45,6 @@ app.use("/notes", notesRoutes);
 app.listen(process.env.PORT, () => {
   console.log("Server is Currently Running");
 });
+
+// Connect to MongoDB
+connectDB();
