@@ -1,6 +1,8 @@
 # StickPad
 
-This is a project I put together, because I love cats, and wanted an application that would show me all the different breeds of cats, all in one area, as well as have something to send to a friend, so they can experience the joy of cats as well. (With more features on my list to be added to turn this into something to help people actually find a new best friend)
+StickyPad is a full stack web application where you can store the notes you come up with on a daily basis.
+What's more fun than sticky notes?
+You can sign up, log in, add notes, retrieve notes, delete notes, log out.
 
 **Link to project:** https://stickypad.netlify.app/
 
