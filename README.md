@@ -2,6 +2,7 @@
 
 StickyPad is a full stack web application where you can store the notes you come up with on a daily basis.
 What's more fun than sticky notes?
+
 You can sign up, log in, add notes, retrieve notes, delete notes, log out.
 
 **Link to project:** https://stickypad.netlify.app/
@@ -32,5 +33,5 @@ You can sign up, log in, add notes, retrieve notes, delete notes, log out.
 [^2]: I'd love to make it so you can choose which colors you want to add to your sticky notes, to make them more personal.
 [^3]: One of the things I want to introduce is the ability to add in "stacks" of sticky notes so the user can actually have a sticky "pad", and group their notes based on their importance, or their own preferences.
 [^4]: When I have time I'd love to switch everything from EJS into React.
-[^5]: This going along with [^1] about making the entire application mobile friendly.
+[^5]: This is going along with [^1] about making the entire application mobile friendly.
 [^6]: Eventually I'd love to make the entire project into a freeform type of environment so you can click and drag your notes around the area, so you will have full range of creativity.
