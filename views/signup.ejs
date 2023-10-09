@@ -2,7 +2,8 @@
 messages.errors.forEach( el => { %>
 <div class="alert alert-danger"><%= el.msg %></div>
 <% }) %> <% } %>
-<form action="/signup" method="POST">
+
+<form class="signupForm text-center" action="/signup" method="POST">
   <input type="text" name="userName" placeholder="User Name" />
   <input type="email" name="email" placeholder="Email" />
   <input type="password" name="password" placeholder="Password" />
@@ -14,6 +15,10 @@ messages.errors.forEach( el => { %>
 
   <input class="btn btn-primary" type="submit" value="Submit" />
 </form>
-<a class="btn btn-light" href="/" role="button">Back to Home</a>
+<div class="container text-center">
+  <a class="btn btn-light" id="backtoHome" href="/" role="button"
+    >Back to Home</a
+  >
+</div>
 
 <%- include('partials/footer') %>
