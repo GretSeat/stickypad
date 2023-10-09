@@ -22,13 +22,14 @@
 
 .stickyNotes {
   list-style: none;
-  /* display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem; */
 }
 .stickyNote {
   height: 200px;
   width: 200px;
   background-color: lightgoldenrodyellow;
   text-align: center;
+}
+
+.footerLink {
+  text-decoration: none;
 }
