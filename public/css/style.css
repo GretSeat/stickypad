@@ -1,10 +1,10 @@
-.mainHeading {
-  text-decoration: none;
-  color: red;
+.background-image {
+  background-image: url(../imgs/notepadBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
-.body {
-  background-color: lightblue;
-}
+
 .completed {
   text-decoration: line-through;
   color: gray;
@@ -13,11 +13,6 @@
   text-decoration: underline;
   font-size: 1.5rem;
   font-weight: bold;
-}
-.footer {
-  margin: 0 auto;
-  width: 50%;
-  text-align: center;
 }
 
 .stickyNotes {
@@ -28,13 +23,4 @@
   width: 200px;
   background-color: lightgoldenrodyellow;
   text-align: center;
-}
-
-.footerLink {
-  text-decoration: none;
-  color: black;
-}
-
-.footerLink:hover {
-  color: blue;
 }
