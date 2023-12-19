@@ -20,40 +20,76 @@
     />
   </head>
   <body class="body background-image">
-    <%- include('partials/header') %>
+    <div
+      class="container d-flex justify-content-center align-items-center vh-100 position-relative"
+    >
+      <div class="card bg-light border border-secondary py-3 bg-light w-50">
+        <%- include('partials/header') -%>
 
+        <div class="container d-flex flex-column gap-2 mt-2">
+          <% if(locals.messages.errors) { %> <% messages.errors.forEach( el => {
+          %>
 
-  <% if(locals.messages.errors) { %> 
-    <% messages.errors.forEach( el => { %>
+          <div class="alert alert-danger" role="alert"><%= el.msg %></div>
 
-  <div class="alert alert-danger" role="alert">
-    <%= el.msg %>
-  </div>
+          <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+          messages.info.forEach(el => { %>
 
-  <% }) %> 
-  <% } %> 
-  <% if (locals.messages.info) { %> 
-    <% messages.info.forEach(el  => { %>
+          <div class="alert alert-danger" role="alert"><%= el.msg %></div>
 
-  <div class="alert alert-danger" role="alert">
-    <%= el.msg %>
-  </div>
+          <% }) %> <% } %>
 
-  <% }) %> 
-  <% } %>
+          <div class="container d-flex flex-column gap-2 mt-2">
+            <form action="/login" method="POST">
+              <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input
+                  class="form-control"
+                  id="inputEmail"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value="FakeUserEmail@email.com"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
 
-  <div class="container text-center">
-  <form class="text-center" action="/login" method="POST">
-    <input type="email" name="email" placeholder="Email" value="FakeUserEmail@email.com" />
-    <input type="password" name="password" placeholder="Password" value="fakepassword" />
-    <input class="btn btn-primary" type="submit" value="Submit">
-  </form>
+              <div class="mb-3">
+                <label for="inputPassword">Password</label>
+                <input
+                  class="form-control"
+                  id="inputPassword"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  value="fakepassword"
+                />
+              </div>
+              <div class="d-flex flex-column gap-2">
+                <input
+                  class="btn btn-primary"
+                  type="submit"
+                  role="button"
+                  value="Login"
+                />
 
-  <a class="btn btn-light" href="/signup" role="button">Sign Up</a>
-</div>
-</main>
+                <a
+                  class="btn btn-light btn-outline-primary"
+                  href="/signup"
+                  role="button"
+                  >Sign Up</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
 
-<%- include('partials/footer') %>
+      <%- include('partials/footer') -%>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
@@ -73,10 +109,3 @@
     <script src="/js/main.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
