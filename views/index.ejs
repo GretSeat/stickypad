@@ -19,14 +19,20 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="body">
-    <%- include('partials/header') -%>
+  <body class="body background-image">
+    <div
+      class="container d-flex justify-content-center align-items-center vh-100"
+    >
+      <div>
+        <%- include('partials/header') -%>
 
-    <div class="container text-center">
-      <a class="btn btn-primary" href="/login" role="button">Login</a>
-      <a class="btn btn-light" href="/signup" role="button">Sign Up</a>
+        <div class="container text-center">
+          <a class="btn btn-primary" href="/login" role="button">Login</a>
+          <a class="btn btn-light" href="/signup" role="button">Sign Up</a>
+        </div>
+
+        <%- include('partials/footer') -%>
+      </div>
     </div>
-
-    <%- include('partials/footer') -%>
   </body>
 </html>
