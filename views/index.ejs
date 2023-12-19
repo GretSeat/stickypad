@@ -23,16 +23,20 @@
     <div
       class="container d-flex justify-content-center align-items-center vh-100 position-relative"
     >
-      <div class="d-flex flex-column">
+      <div class="card bg-light border border-secondary py-3 bg-light w-50">
         <%- include('partials/header') -%>
 
-        <div class="container d-flex flex-column gap-2">
+        <div class="container d-flex flex-column gap-2 mt-2">
           <a class="btn btn-primary" href="/login" role="button">Login</a>
-          <a class="btn btn-light" href="/signup" role="button">Sign Up</a>
+          <a
+            class="btn btn-light btn-outline-primary"
+            href="/signup"
+            role="button"
+            >Sign Up</a
+          >
         </div>
-
-        <%- include('partials/footer') -%>
       </div>
+      <%- include('partials/footer') -%>
     </div>
 
     <script
