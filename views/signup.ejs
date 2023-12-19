@@ -20,30 +20,55 @@
     />
   </head>
   <body class="body background-image">
-    <%- include('partials/header') %> <% if (locals.messages.errors) { %> <%
-    messages.errors.forEach( el => { %>
-    <div class="alert alert-danger"><%= el.msg %></div>
-    <% }) %> <% } %>
+    <div
+      class="container d-flex justify-content-center align-items-center vh-100 position-relative"
+    >
+      <div class="card bg-light border border-secondary py-3 bg-light w-50">
+        <%- include('partials/header') -%> <% if (locals.messages.errors) { %>
+        <% messages.errors.forEach( el => { %>
+        <div class="alert alert-danger"><%= el.msg %></div>
+        <% }) %> <% } %>
 
-    <form class="signupForm text-center" action="/signup" method="POST">
-      <input type="text" name="userName" placeholder="User Name" />
-      <input type="email" name="email" placeholder="Email" />
-      <input type="password" name="password" placeholder="Password" />
-      <input
-        type="password"
-        name="confirmPassword"
-        placeholder="Confirm Password"
-      />
+        <form class="container" action="/signup" method="POST">
+          <input
+            class="form-control mb-2"
+            type="text"
+            name="userName"
+            placeholder="User Name"
+          />
+          <input
+            class="form-control mb-2"
+            type="email"
+            name="email"
+            placeholder="Email"
+          />
+          <input
+            class="form-control mb-2"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+          <input
+            class="form-control mb-2"
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+          />
 
-      <input class="btn btn-primary" type="submit" value="Submit" />
-    </form>
-    <div class="container text-center">
-      <a class="btn btn-light" id="backtoHome" href="/" role="button"
-        >Back to Home</a
-      >
+          <div class="d-flex flex-column">
+            <input class="btn btn-primary mb-2" type="submit" value="Sign Up" />
+            <a
+              class="btn btn-light btn-outline-primary"
+              id="backtoHome"
+              href="/"
+              role="button"
+              >Back to Home</a
+            >
+          </div>
+        </form>
+      </div>
+      <%- include('partials/footer') -%>
     </div>
-
-    <%- include('partials/footer') %>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
