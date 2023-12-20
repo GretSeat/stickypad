@@ -1,54 +1,56 @@
-<%- include('partials/head') -%>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') -%>
 
-<body class="body background-image">
-  <div
-    class="container d-flex justify-content-center align-items-center vh-100 position-relative"
-  >
-    <div class="card bg-light border border-secondary py-3 bg-light w-50">
-      <%- include('partials/header') -%> <% if (locals.messages.errors) { %> <%
-      messages.errors.forEach( el => { %>
-      <div class="alert alert-danger"><%= el.msg %></div>
-      <% }) %> <% } %>
+  <body class="body background-image">
+    <div
+      class="container d-flex justify-content-center align-items-center vh-100 position-relative"
+    >
+      <div class="card bg-light border border-secondary py-3 bg-light w-50">
+        <%- include('partials/header') -%> <% if (locals.messages.errors) { %>
+        <% messages.errors.forEach( el => { %>
+        <div class="alert alert-danger"><%= el.msg %></div>
+        <% }) %> <% } %>
 
-      <form class="container" action="/signup" method="POST">
-        <input
-          class="form-control mb-2"
-          type="text"
-          name="userName"
-          placeholder="User Name"
-        />
-        <input
-          class="form-control mb-2"
-          type="email"
-          name="email"
-          placeholder="Email"
-        />
-        <input
-          class="form-control mb-2"
-          type="password"
-          name="password"
-          placeholder="Password"
-        />
-        <input
-          class="form-control mb-2"
-          type="password"
-          name="confirmPassword"
-          placeholder="Confirm Password"
-        />
+        <form class="container" action="/signup" method="POST">
+          <input
+            class="form-control mb-2"
+            type="text"
+            name="userName"
+            placeholder="User Name"
+          />
+          <input
+            class="form-control mb-2"
+            type="email"
+            name="email"
+            placeholder="Email"
+          />
+          <input
+            class="form-control mb-2"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+          <input
+            class="form-control mb-2"
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+          />
 
-        <div class="d-flex flex-column">
-          <input class="btn btn-primary mb-2" type="submit" value="Sign Up" />
-          <a
-            class="btn btn-light btn-outline-primary"
-            id="backtoHome"
-            href="/"
-            role="button"
-            >Back to Home</a
-          >
-        </div>
-      </form>
+          <div class="d-flex flex-column">
+            <input class="btn btn-primary mb-2" type="submit" value="Sign Up" />
+            <a
+              class="btn btn-light btn-outline-primary"
+              id="backtoHome"
+              href="/"
+              role="button"
+              >Back to Home</a
+            >
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-
-  <%- include('partials/footer') -%> <%- include('partials/script') -%>
-</body>
+    <%- include('partials/footer') -%> <%- include('partials/script') -%>
+  </body>
+</html>
