@@ -1,6 +1,6 @@
 const deleteBtn = document.querySelectorAll(".del");
-const noteItem = document.querySelectorAll("span.not");
-const noteComplete = document.querySelectorAll("span.completed");
+const noteItem = document.querySelectorAll(".not");
+const noteComplete = document.querySelectorAll(".completed");
 
 Array.from(deleteBtn).forEach((el) => {
   el.addEventListener("click", deleteNote);

@@ -7,7 +7,9 @@ You can sign up, log in, add notes, retrieve notes, delete notes, log out.
 
 **Link to project:** https://stickypad.netlify.app/
 
-![alt tag](/public/imgs/notes.png)
+![Sticky Pad Landing Page](/public/imgs/main.png)
+![Sticky Pad Login Page](/public/imgs/login.png)
+![Sticky Pad Sign Up Page](/public/imgs/signup.png)
 
 ## How It's Made:
 

@@ -1,39 +1,104 @@
-<%- include('partials/header') %>
-    <div class="container">
-        <h1><%= user.userName %>'s StickyPad</h1>
-    </div>
-    <div class="container-md text-center">
-    <ul class="stickyNotes text-center row">
-    <% notes.forEach( el => { %>
-        
-            <li class='noteItem stickyNote container col gy-3 m-1' data-id='<%=el._id%>'>
-                
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></span>
-                <p class='<%= el.completed === true ? 'completed' : ''%>'><%=el.note %></p>
-                <button type="button" class="btn btn-danger btn-sm del">Delete</button>
-            
-            </li>
-    <% }) %>    
-    </ul>
-</div>
-    
-<form class="container" action="/notes/createNote" method='POST'>
-        <h2><%= user.userName %> has <%= left %> Sticky Notes</h2>
-        <div class="row col-12 mb-3 align-items-center">
-            <label class="form-label">Note Title</label>
-          <input type="text" class="form-control form-control-sm" placeholder="Pick up Paycheck from Boss..." name="title">
-        </div>
-        <div class="row col-12 mb-3">
-            <label  class="form-label">What is your note?</label>
-            <textarea class="form-control form-control-sm" placeholder="I was pretty hungover yesterday, but I think I remember where I work." rows="3" name="noteItem"></textarea>
-        </div>
-        <div class="col-auto mb-3">
-        <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
-        </div>
-      </form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="/imgs/site.webmanifest" />
 
-      <div class="container text-center">
-    <a class="btn btn-danger" role="button" href="/logout">Logout</a>
+    <link
+      rel="apple-touch-icon"
+      href="/imgs/apple-touch-icon.png"
+      sizes="180x180"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/imgs/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    /> 
+    <link
+      rel="icon"
+      href="/imgs/favicon-16x16.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <title>StickyPad</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+
+  </head>
+
+
+  <body class="">
+    <div class="container d-flex justify-content-between">
+      <h1>StickyPad</h1>
+      <div>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Add a Sticky Note
+        </button>
+        <a class="btn btn-danger" role="button" href="/logout">Logout</a>
       </div>
+    </div>
+
+    <!-- COLLAPSE AREA FOR NEW NOTE -->
+    <h3 class="container"><%= user.userName %> has <%= left %> Sticky Notes</h3>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        <form class="container" action="/notes/createNote" method='POST'>
+
+          <div class="mb-2 form-floating">        
+            <input type="text" class="form-control form-control-sm" id="noteTitle" placeholder="Pick up Paycheck from Boss..." name="title">
+            <label class="form-label" for="noteTitle">Note Title</label>
+          </div>
     
-    <%- include('partials/footer') %>
+          <div class="mb-2 form-floating">
+            <textarea class="form-control" placeholder="I was pretty hungover yesterday, but I think I remember where I work." rows="3" name="noteItem" id="noteItem"></textarea>
+            <label  class="form-label" for="noteItem">What is your note?</label>
+          </div>
+    
+          <div class="mb-2">
+            <button type="submit" class="btn btn-primary" value="Submit">Stick It!</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- NOTES -->
+    <div class="stickyNotes container border border-danger">
+        <div class="row row-cols-md-4 row-col-sm-2">
+          <% notes.forEach( el => { %>
+          <div class="col">
+            <div class='card border border-primary mb-3'>
+              <div class="card-body" data-id='<%=el._id%>'>
+                <h5 class='card-title <%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></h5>
+                <p class='card-text <%= el.completed === true ? 'completed' : ''%>'><%=el.note %></p>
+                <button type="button" class="btn btn-danger btn-sm del">Delete</button>
+              </div>
+            </div>
+          </div>
+          <% }) %> 
+        </div>           
+    </div>
+    <%- include('partials/script') -%>
+  </body>
+</html>
+
+
