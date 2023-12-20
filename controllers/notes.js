@@ -60,9 +60,9 @@ module.exports = {
     }
   },
   deleteNote: async (req, res) => {
-    console.log(req.body.noteIdFromJSFile);
     try {
       await Note.findOneAndDelete({ _id: req.body.noteIdFromJSFile });
+      console.log(req.body.noteIdFromJSFile);
       console.log("Deleted Sticky Note");
       res.json("Deleted It");
     } catch (err) {
