@@ -3,8 +3,8 @@
 
   <%- include('partials/head') -%>
 
-  <body class="d-flex flex-column min-vh-100">
-    <div class="container d-flex justify-content-between">
+  <body class="d-flex flex-column min-vh-100" style="background-color: #FAFAEB">
+    <div class="container d-flex justify-content-between mt-3">
       <h1>StickyPad</h1>
       <div>
         <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -16,8 +16,9 @@
 
     <!-- COLLAPSE AREA FOR NEW NOTE -->
     <h3 class="container"><%= user.userName %> has <%= left %> Sticky Notes</h3>
-    <div class="collapse" id="collapseExample">
-      <div class="card card-body">
+    <div class="d-flex justify-content-center">
+      <div class="collapse w-50" id="collapseExample">
+      <div class="card card-body shadow">
         <form class="container" action="/notes/createNote" method='POST'>
 
           <div class="mb-2 form-floating">        
@@ -31,20 +32,22 @@
           </div>
     
           <div class="mb-2">
-            <button type="submit" class="btn btn-primary" value="Submit">Stick It!</button>
+            <button type="submit" class="btn btn-primary" id="liveToastBtn" value="Submit">Stick It!</button>
           </div>
         </form>
       </div>
+    </div> 
     </div>
+   
 
 
     <!-- NOTES -->
-    <div class="stickyNotes container  border border-primary mb-5">
+    <div class="stickyNotes container my-3">
         <div class="row g-2">
           <% notes.forEach( el => { %>
           <div class="col-6 col-md-4">
-            <div class='card border border-primary mb-3 h-100'>
-              <div class="card-body position-relative" data-id='<%=el._id%>'>
+            <div class='card mb-3 h-100 shadow'>
+              <div class="card-body position-relative stickyNote border border-warning" data-id='<%=el._id%>'>
                 <h5 class='card-title <%= el.completed === true ? 'completed' : 'not'%>'><%= el.title %></h5>
                 <p class='card-text <%= el.completed === true ? 'completed' : ''%>'><%=el.note %></p>
                 <button type="button" class="btn btn-danger btn-sm del position-absolute bottom-0 end-0 mx-1 mb-1">
@@ -56,6 +59,7 @@
           <% }) %> 
         </div>           
     </div>
+
     <%- include('partials/footer') -%>
     <%- include('partials/script') -%>
   </body>
