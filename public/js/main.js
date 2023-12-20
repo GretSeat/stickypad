@@ -34,7 +34,6 @@ async function deleteNote() {
 
 async function markComplete() {
   const noteId = this.parentNode.dataset.id;
-  console.log(this.parentNode);
   try {
     const response = await fetch("notes/markComplete", {
       method: "put",
