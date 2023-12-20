@@ -1,4 +1,4 @@
-# StickPad
+# StickyPad
 
 StickyPad is a full stack web application where you can store the notes you come up with on a daily basis.
 What's more fun than sticky notes?
@@ -7,9 +7,25 @@ You can sign up, log in, add notes, retrieve notes, delete notes, log out.
 
 **Link to project:** https://stickypad.netlify.app/
 
+### Landing Page
+
 ![Sticky Pad Landing Page](/public/imgs/main.png)
+
+### Login Page
+
 ![Sticky Pad Login Page](/public/imgs/login.png)
+
+### Sign Up Page
+
 ![Sticky Pad Sign Up Page](/public/imgs/signup.png)
+
+### Notes Page - With "Add a Note" Hidden
+
+![Sticky Pad Page Closed](/public/imgs/notesClosed.png)
+
+### Notes Page - With "Add a Note" Visible
+
+![Sticky Pad Page Open](/public/imgs/notesOpen.png)
 
 ## How It's Made:
 
@@ -17,12 +33,12 @@ You can sign up, log in, add notes, retrieve notes, delete notes, log out.
 
 ## Optimizations
 
-- It could definitely look better, in the future I'd like to clean up the design of the page to make it more appealing.[^1]
-- Adding different color sticky notes to your project.[^2]
-- Grouping Sticky Notes Together based on their importance, or user preference.[^3]
-- Switching out EJS for React.[^4]
-- Mobile Responsive[^5]
-- (Further Down the Road) Clicking and Dragging Notes to make the entire area a place to "paste" their notes.[^6]
+- [x] ~~It could definitely look better, in the future I'd like to clean up the design of the page to make it more appealing.~~[^1]
+- [ ] Adding different color sticky notes to your project.[^2]
+- [ ] Grouping Sticky Notes Together based on their importance, or user preference.[^3]
+- [ ] Switching out EJS for React.[^4]
+- [ ] Mobile Responsive[^5]
+- [ ] (Further Down the Road) Clicking and Dragging Notes to make the entire area a place to "paste" their notes.[^6]
 
 ## Lessons Learned:
 
