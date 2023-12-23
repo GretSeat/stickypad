@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/gretseat/stickypad">
-    <img src="/public/imgs/android-chrome-512x512.png" alt="Logo" width="80" height="80">
+    <img src="./public/imgs/android-chrome-512x512.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">StickyPad</h3>
@@ -44,7 +44,7 @@ You can sign up, log in, add notes, retrieve notes, delete notes, log out.
 <a href="https://github.com/gretseat/stickypad"><strong>Explore the docs »</strong></a>
 <br />
 <br />
-<a href="https://github.com/gretseat/stickypad">View Demo</a>
+<a href="http://stickypad.onrender.com">View Demo</a>
 ·
 <a href="https://github.com/gretseat/stickypad/issues">Report Bug</a>
 ·
@@ -83,19 +83,15 @@ You can sign up, log in, add notes, retrieve notes, delete notes, log out.
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://stickypad.onrender.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `gretseat`, `stickypad`, `gretseatdev`, `linkedin_username`, `gmail`, `gretseatdev`, `project_title`, `StickyPad is a full stack web application where you can store the notes you come up with on a daily basis.
-What's more fun than sticky notes?
-
-You can sign up, log in, add notes, retrieve notes, delete notes, log out.`
+You can sign up, log in, add notes, retrieve notes, delete notes, log out.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
 - [![Windows][Windows.com]][Windows-url]
-- [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 - [![MongoDB][MongoDB.com]][MongoDB-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -263,14 +259,13 @@ Project Link: [https://github.com/gretseat/stickypad](https://github.com/gretsea
 
 [MongoDB.com]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
 [MongoDB-url]: https://www.mongodb.com/
-[Bootstrap]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com/
 
 <!-- TESTS -->
 
 [Jest.com]: https://img.shields.io/badge/Jest-323330?style=for-the-badge&logo=Jest&logoColor=white
 [Jest-url]: https://img.shields.io/badge/mocha.js-323330?style=for-the-badge&logo=mocha&logoColor=Brown
 
+<!--
 https://img.shields.io/badge/chai.js-323330?style=for-the-badge&logo=chai&logoColor=red
 
 https://img.shields.io/badge/Microsoft_SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white
@@ -284,6 +279,7 @@ https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoCol
 https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white
 https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+-->
 
 <!-- C# -->
 
@@ -305,7 +301,7 @@ https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwi
 [JavaScript-url]: www.go.com
 
 <!-- REACT FRAMEWORKS -->
-
+<!--
 https://github-readme-stats.vercel.app/api/top-langs/?username={username}&theme=blue-green
 https://github-readme-stats.vercel.app/api?username={username}&theme=blue-green
 https://github-readme-stats.vercel.app/api?username={username}&theme=blue-green
@@ -369,6 +365,7 @@ https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
+-->
 
 <!-- WINDOWS -->
 
